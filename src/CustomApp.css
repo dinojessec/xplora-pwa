@@ -1,0 +1,9 @@
+:root {
+  --primary: #fff;
+  --secondary: #f89673;
+  --title: #26d0e7;
+}
+
+.btn {
+  background-color: var(--secondary);
+}
