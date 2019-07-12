@@ -1,22 +1,36 @@
 import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Header from "./components/Header";
-import Jumbotron from "./components/Jumbotron";
-import Suggestions from "./components/Suggestions";
-import Content from "./components/Content";
-import Footer from "./components/Footer";
+import Header from "./components/global/Header";
+import Footer from "./components/global/Footer";
 
-// import "./App.css";
+import Home from "./components/Views/Home";
+import Booking from "./components/Views/Booking";
+import Help from "./components/Views/Help";
+import About from "./components/Views/About";
+import Login from "./components/Views/Login";
+
+import "./CustomApp.css";
+import NotFound from "./components/Views/NotFound";
+import DateSelection from "./components/booking-process/DateSelection";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Jumbotron />
-      <Suggestions />
-      <Content />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/manage-booking" component={Booking} />
+          <Route path="/help" component={Help} />
+          <Route path="/about" component={About} />
+          <Route path="/login" component={Login} />
+          <Route path="/booking/date-selection" component={DateSelection} />
+          <Route component={NotFound} />
+        </Switch>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

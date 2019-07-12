@@ -1,11 +1,16 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-expand-sm navbar-light p-4 mr-4 ml-4">
-      <a className="navbar-brand ml-lg-5" href="/">
-        Icon
-      </a>
+    <nav className="navbar navbar-expand-lg navbar-expand-sm navbar-light mr-4 ml-4">
+      <NavLink className="navbar-brand ml-lg-5" exact to="/">
+        <img
+          className="header-icon"
+          src={require("../../assets/microtelIcon.png")}
+          alt="microtel-tours"
+        />
+      </NavLink>
       <button
         className="navbar-toggler"
         type="button"
@@ -17,28 +22,27 @@ export default function Header() {
       >
         <span className="navbar-toggler-icon justify-content-end" />
       </button>
-
       <div className="collapse navbar-collapse" id="navbar">
         <ul className="navbar-nav ml-auto mr-5">
           <li className="nav-item">
-            <a href="/" className="nav-link">
+            <NavLink to="/manage-booking" className="nav-link">
               Booking
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link">
+            <NavLink to="/help" className="nav-link">
               Help
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               About
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="/" className="nav-link">
+            <NavLink to="/login" className="nav-link">
               Sign up / Log in
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
