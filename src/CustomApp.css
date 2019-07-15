@@ -147,6 +147,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px;
+  text-decoration: none;
 }
 
 .content-item {
@@ -232,3 +233,7 @@ html {
   height: 75px;
   width: 145px;
 }
+
+/* booking content */
+
+/* selectnumberofguest  */

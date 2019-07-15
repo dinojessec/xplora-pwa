@@ -6,8 +6,9 @@ export default function Content() {
   return (
     <div className="content">
       <div className="content-item card">
-        <NavLink to="/booking/date-selection" className="content-link">
+        <NavLink to="/booking/main-booking" className="content-link">
           <img
+            // get image from database
             src={require("../../assets/DSC00591.jpg")}
             className="content-img card-img-top"
             alt="..."
