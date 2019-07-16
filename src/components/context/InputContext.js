@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 
 export const InputContext = createContext();
 
-class InputContextProvider extends React.Component {
+export default class InputContextProvider extends React.Component {
   state = {
     testState: true
   };
@@ -13,7 +13,6 @@ class InputContextProvider extends React.Component {
     // console.log(input);
   };
   render() {
-    console.log(this.state);
     return (
       <InputContext.Provider
         value={{ ...this.state, handleDateInput: this.handleDateInput }}
@@ -24,4 +23,3 @@ class InputContextProvider extends React.Component {
   }
 }
 
-export default InputContextProvider;

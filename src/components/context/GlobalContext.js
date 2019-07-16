@@ -1,25 +1,50 @@
-import React, { createContext, useEffect } from "react";
+import React, { createContext } from "react";
 
-import Axios from 'axios';
+import Axios from "axios";
 
-export const InputContext = createContext();
+export const GlobalContext = createContext();
 
-const GlobalContextProvider = () => {
+export default class GlobalContextProvider extends React.Component {
   state = {
-    testState: true
+    isLoading: true,
+    data: ""
+  };
+  componentDidMount() {
+    this.setState({ isLoading: false });
+    this.loadResource();
+  }
+
+  loadResource = async () => {
+    const baseUrl =
+      "http://localhost/explora/api/tour-collections.json?source_url=localhost";
+    const res = await Axios.get(baseUrl, {
+      responseType: "json",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded; application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE"
+      }
+    });
+    const resources = res.data.Data;
+    await this.setState({ data: resources });
   };
 
-  
   render() {
-    console.log(this.state);
-    return (
-      <GlobalContext.Provider
-        value={{ ...this.state, handleDateInput: this.handleDateInput }}
-      >
-        {this.props.children}
-      </GlobalContext.Provider>
-    );
+    const { isLoading } = this.state;
+    // const data = this.state.data;
+    const entryTourCollection = this.state.data.EntryTourCollection;
+    const tourCollectionQuery = this.state.data.TourCollectionQuery;
+    // console.log(tourCollectionQuery);
+    if (isLoading) {
+      return null;
+    } else {
+      return (
+        <GlobalContext.Provider
+          value={{ entryTourCollection, tourCollectionQuery }}
+        >
+          {this.props.children}
+        </GlobalContext.Provider>
+      );
+    }
   }
 }
-
-export default GlobalContextProvider;

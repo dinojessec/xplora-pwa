@@ -234,6 +234,12 @@ html {
   width: 145px;
 }
 
-/* booking content */
+/* loading */
 
-/* selectnumberofguest  */
+.loader:empty {
+  position: absolute;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+}
+
+

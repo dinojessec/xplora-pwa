@@ -3,7 +3,7 @@ import Jumbotron from "../contents/Jumbotron";
 import Suggestion from "../contents/Suggestions";
 import Content from "../contents/Content";
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <Jumbotron />
@@ -11,4 +11,6 @@ export default function Home() {
       <Content />
     </div>
   );
-}
+};
+
+export default Home;
