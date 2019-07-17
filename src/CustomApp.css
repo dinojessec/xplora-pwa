@@ -5,56 +5,56 @@
 }
 
 @media all and (max-device-width: 1024px) {
-  h1 {
-    font-size: 55px;
+  .intro-message .h1 {
+    font-size: 50px;
   }
-  h2 {
+  .welcome-message .h2 {
     font-size: 40px;
   }
 }
 
-@media all and (max-device-width: 720px) {
-  h1 {
-    font-size: 30px;
+@media all and (max-device-width: 768px) {
+  .intro-message .h1 {
+    font-size: 45px;
   }
-  h2 {
-    font-size: 18px;
+  .welcome-message .h2 {
+    font-size: 35px;
   }
 }
 
 @media all and (max-device-width: 640px) {
-  h1 {
+  .intro-message .h1 {
     font-size: 16px;
   }
-  h2 {
+  .welcome-message .h2 {
     font-size: 16px;
   }
 }
 
 @media all and (max-device-width: 414px) {
-  h1 {
+  .intro-message .h1 {
     font-size: 30px;
   }
-  h2 {
+  .welcome-message .h2 {
     font-size: 25px;
   }
 }
 
 @media all and (max-device-width: 375px) {
-  h1 {
+  .intro-message .h1 {
     font-size: 27px;
   }
-  h2 {
+  .welcome-message .h2 {
     font-size: 20px;
   }
 }
 
 @media all and (max-device-width: 320px) {
-  h1 {
-    font-size: 25px;
+  .intro-message .h1 {
+    font-size: 30px;
   }
-  h2 {
-    font-size: 20px;
+  .welcome-message .h2 {
+    font-size: 25px;
   }
 }
 
@@ -142,26 +142,43 @@ html {
 }
 
 /* content */
-.content {
+/* .content {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.content-item {
   border: 0;
   padding: 15px;
 }
 
+.content .content-link {
+  padding: 15px;
+  border: 0;
+  position: relative;
+  text-align: center;
+}
+
 .content-img {
-  /* display: block; */
   max-width: 100%;
   max-height: 100%;
   width: 300px;
   height: 200px;
   border-radius: 10px;
+  color: var(--secondary);
+}
+
+
+.price-tag {
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 0.2rem, 0.5rem;
+}
+
+.content .content-link .card-text {
+  position: absolute;
+  bottom: 43%;
+  left: 8%;
+  font-weight: 900;
 }
 
 .content .content-item .content-description {
@@ -170,18 +187,19 @@ html {
 
 .content .content-item .content-description .content-type {
   color: #000000;
-  text-decoration: none;
 }
 
 .content .content-item .content-description .content-name {
   color: #000000;
-  text-decoration: none;
 }
 
 .content .content-item .content-description .content-location {
   color: #000000;
-  text-decoration: none;
 }
+
+.content .content-item .content-description .content-rating {
+  color: #000000;
+} */
 
 /* footer */
 .footer {
@@ -241,5 +259,3 @@ html {
   top: calc(50% - 4em);
   left: calc(50% - 4em);
 }
-
-

@@ -15,10 +15,12 @@ export default function Jumbotron() {
             alt="..."
           />
           <div className="welcome-message align-top">
-            <h2>Hello, *name of user*! Welcome to *location.</h2>
+            <h2 className="h2">Hello, *name of user*! Welcome to *location.</h2>
           </div>
           <div className="intro-message align-middle">
-            <h1>Book unique things to do near Microtel by Wyndham</h1>
+            <h1 className="h1">
+              Book unique things to do near Microtel by Wyndham
+            </h1>
           </div>
         </div>
       ) : null}
