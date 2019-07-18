@@ -16,8 +16,11 @@ export default class GlobalContextProvider extends React.Component {
 
   loadResource = async () => {
     try {
-      const baseUrl =
-        "http://localhost/explora/api/tour-collections.json?source_url=localhost";
+      const baseUrl = `http://${
+        process.env.REACT_APP_API_HOST
+      }/api/tour-collections.json?source_url=${
+        process.env.REACT_APP_SOURCE_URL
+      }`;
       const res = await Axios.get(baseUrl, {
         responseType: "json",
         headers: {

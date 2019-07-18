@@ -17,6 +17,7 @@ import "./CustomApp.css";
 import GlobalContextProvider from "./components/context/GlobalContext";
 
 const App = () => {
+  console.log(window.location.href);
   return (
     <GlobalContextProvider>
       <BrowserRouter>
@@ -28,7 +29,11 @@ const App = () => {
             <Route path="/help" component={Help} />
             <Route path="/about" component={About} />
             <Route path="/login" component={Login} />
-            <Route path="/experiences/:id" component={MainBooking} />
+            <Route
+              // path="/api/tour-collections/:id/details.json?source_url=:src"
+              path="/api/tour-collections/:id/details.json"
+              component={MainBooking}
+            />
             <Route component={NotFound} />
           </Switch>
           <Footer />

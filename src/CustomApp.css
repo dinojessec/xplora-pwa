@@ -142,64 +142,68 @@ html {
 }
 
 /* content */
-/* .content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  border: 0;
-  padding: 15px;
-}
 
-.content .content-link {
-  padding: 15px;
-  border: 0;
+.content .link {
+  text-decoration: none;
+  color: #000000;
   position: relative;
-  text-align: center;
 }
 
-.content-img {
+.content .link .content-img {
+  background-size: 100%, 100%;
   max-width: 100%;
   max-height: 100%;
   width: 300px;
   height: 200px;
   border-radius: 10px;
+}
+
+.content .link .content-img .price-tag {
+  background-color: #fff;
+  background-size: auto auto;
+  border-radius: 2rem;
+  position: absolute;
+  bottom: 39%;
+  left: 1%;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 60;
+}
+
+.content .link .content-img .price-tag .current-price {
+  font-weight: 900;
+  width: 65px;
+}
+
+.content .link .content-img .price-tag .original-price {
+  text-decoration-line: line-through;
+  width: 65px;
+}
+
+.content .link .content-img .price-tag .discount-amount {
+  background-color: #f8dd1a;
+  background-size: 100%;
+  border-radius: 2rem;
+  width: 70px;
+}
+
+.content .content-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content .content-description .content-type {
   color: var(--secondary);
 }
 
-
-.price-tag {
-  background-color: #fff;
-  border-radius: 2rem;
-  padding: 0.2rem, 0.5rem;
+.content .content-description .content-name {
+  font-weight: 900 !important;
 }
 
-.content .content-link .card-text {
-  position: absolute;
-  bottom: 43%;
-  left: 8%;
-  font-weight: 900;
+.content .content-description .content-location {
+  font-weight: 1;
 }
-
-.content .content-item .content-description {
-  padding: 0;
-}
-
-.content .content-item .content-description .content-type {
-  color: #000000;
-}
-
-.content .content-item .content-description .content-name {
-  color: #000000;
-}
-
-.content .content-item .content-description .content-location {
-  color: #000000;
-}
-
-.content .content-item .content-description .content-rating {
-  color: #000000;
-} */
 
 /* footer */
 .footer {
