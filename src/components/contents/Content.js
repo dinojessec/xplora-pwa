@@ -12,9 +12,6 @@ export default function Content() {
   const result4 = result3
     ? result3.map(item => (
         <Link
-          // to={`/api/tour-collections/${item.id}/details.json?source_url=${
-          //   process.env.REACT_APP_SOURCE_URL
-          // }`}
           to={`/api/tour-collections/${item.id}/details.json`}
           className="link"
           key={item.id}

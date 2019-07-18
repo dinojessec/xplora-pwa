@@ -1,27 +1,29 @@
 import React from "react";
 import ReactDates from "./ReactDates";
-import Axios from "axios";
+// import Axios from "axios";
 
 import InputContextProvider from "../context/InputContext";
 import SelectNumberOfGuest from "./SelectNumberOfGuest";
 
 export default class MainBooking extends React.Component {
-  getRequest = async () => {
-    try {
-      // get this.props.match.url *** hostname still not included
-      const url = `?source_url=${process.env.REACT_APP_SOURCE_URL}`;
-      const getQuery = await Axios.get(url);
-      const result = await getQuery.data;
-      console.log(result);
-      console.log(url);
-    } catch {
-      console.log("error on main booking");
-    }
-  };
+  // getRequest = async () => {
+  //   try {
+  // get this.props.match.url *** hostname still not included
+  // const url = this.props.match;
+  // const url = `?source_url=${process.env.REACT_APP_SOURCE_URL}`;
+  // const getQuery = await Axios.get(url);
+  // const result = await getQuery.data;
+  // console.log(result);
+  //     console.log(url);
+  //   } catch {
+  //     console.log("error on main booking");
+  //   }
+  // };
 
   componentDidMount() {
     // this.getRequest();
-    // console.log(this.props.match);
+    console.log(this.props.match);
+    console.log(window.location.href);
   }
 
   render() {

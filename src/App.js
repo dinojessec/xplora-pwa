@@ -17,10 +17,11 @@ import "./CustomApp.css";
 import GlobalContextProvider from "./components/context/GlobalContext";
 
 const App = () => {
-  console.log(window.location.href);
+  const basename = process.env.REACT_APP_API_HOST || "/";
+  console.log(basename);
   return (
     <GlobalContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <div className="App">
           <Header />
           <Switch>
